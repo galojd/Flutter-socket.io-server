@@ -23,7 +23,18 @@
 
         socket.on('mensaje', function(payload){
             console.log('escuchando:', payload);
-        });//con esto estoy escuchando el mensaje que me envia el servidor
+        });//con esto estoy escuchando el mensaje que me envia el 
+        
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('mensaje:', payload);
+        });//con esto estoy escuchando el mensaje que me envia el 
+
+        socket.on('bandas-activas', function(canciones){
+            console.clear();
+            console.table(canciones);
+        });
+
+    
     </script>
 </body>
 </html>
